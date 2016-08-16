@@ -1,6 +1,13 @@
 
 // particlesJS.load(@dom-id, @path-json, @callback (optional)); 
 particlesJS.load('particles-js', 'assets/particles.json', function() {
-  console.log('callback - particles.js config loaded');
 });
 
+$(document).ready(function(){
+  $(window).click(function(){
+    $('.opener').fadeOut(1600, function(){
+      })
+    $('.announcement').fadeIn(2400, function(){
+    })
+  })
+});

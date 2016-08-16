@@ -12,7 +12,7 @@
   font-family: "Josefin Slab", serif; }
   .opener .dropcaps {
     display: inline;
-    margin-left: 2vw;
+    margin-left: 5vw;
     margin-bottom: -170px;
     margin-right: -80px; }
   .opener h1 {
@@ -20,17 +20,14 @@
     font-size: 150px;
     display: inline; }
   .opener h2 {
-    margin-left: 32vw;
+    margin-left: 35vw;
     font-size: 90px; }
   .opener #special {
-    margin-left: 36vw;
+    margin-top: -4vh;
+    margin-left: 38vw;
     font-size: 120px; }
 
-/* ---- reset ---- */
-body {
-  margin: 0;
-  font: normal 75% Arial, Helvetica, sans-serif; }
-
+/* ---- begin particles.js ---- */
 canvas {
   display: block;
   vertical-align: bottom; }
@@ -50,5 +47,18 @@ canvas {
   color: black;
   width: 98vw;
   height: 97vh; }
+
+/*----begin chapter 1 announcement----*/
+.announcement {
+  display: none; }
+  .announcement h2 {
+    margin-top: 14vh;
+    margin-left: 34vw;
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 90px; }
+  .announcement h3 {
+    margin-left: 21vw;
+    font-family: "Josefin Slab", serif;
+    font-size: 80px; }
 
 /*# sourceMappingURL=main.css.map */

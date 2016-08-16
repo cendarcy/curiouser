@@ -13,15 +13,13 @@
   height: 93vh;
 }
 
-
-
 .opener {
   font-family: $josefin;
 
   
   .dropcaps{
     display: inline;
-    margin-left: 2vw;
+    margin-left: 5vw;
     margin-bottom: -170px;
     margin-right: -80px;
 
@@ -34,22 +32,18 @@
   }
 
   h2 {
-    margin-left: 32vw;
+    margin-left: 35vw;
     font-size: 90px;
     }
 
   #special {
-    margin-left: 36vw;    
+    margin-top: -4vh;
+    margin-left: 38vw;    
     font-size: 120px;
   }
 }
 
-/* ---- reset ---- */
-
-body {
-  margin: 0;
-  font:normal 75% Arial, Helvetica, sans-serif;
-}
+/* ---- begin particles.js ---- */
 
 canvas {
   display: block;
@@ -59,6 +53,7 @@ canvas {
 /* ---- particles.js container ---- */
 
 #particles-js {
+
   position: absolute;
   width: 98vw;
   height: 97vh;
@@ -74,4 +69,48 @@ canvas {
   width: 98vw;
   height: 97vh;
 }
+
+/*----begin chapter 1 announcement----*/
+
+.announcement {
+  display:none;
+  
+
+  h2 {
+    margin-top: 14vh;
+    margin-left: 34vw;
+    font-family: $source;
+    font-size: 90px;
+  }
+  
+  h3 {
+    margin-left: 21vw;
+    font-family: $josefin;
+    font-size: 80px;
+  }
+  
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
