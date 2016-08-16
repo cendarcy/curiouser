@@ -1,0 +1,54 @@
+* {
+  margin-top: 0px;
+  margin-left: 0px; }
+
+.border {
+  left: 0;
+  border: 2em solid black;
+  width: 97vw;
+  height: 93vh; }
+
+.opener {
+  font-family: "Josefin Slab", serif; }
+  .opener .dropcaps {
+    display: inline;
+    margin-left: 2vw;
+    margin-bottom: -170px;
+    margin-right: -80px; }
+  .opener h1 {
+    padding-right: 200px;
+    font-size: 150px;
+    display: inline; }
+  .opener h2 {
+    margin-left: 32vw;
+    font-size: 90px; }
+  .opener #special {
+    margin-left: 36vw;
+    font-size: 120px; }
+
+/* ---- reset ---- */
+body {
+  margin: 0;
+  font: normal 75% Arial, Helvetica, sans-serif; }
+
+canvas {
+  display: block;
+  vertical-align: bottom; }
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute;
+  width: 98vw;
+  height: 97vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+/* ---- stats.js ---- */
+.particles-js-canvas-el {
+  margin-top: -97vh;
+  color: black;
+  width: 98vw;
+  height: 97vh; }
+
+/*# sourceMappingURL=main.css.map */
