@@ -168,6 +168,7 @@ canvas {
   #rabbit-hole #s2-background {
     width: 200vw;
     height: 200vh;
+    background-size: 250vh;
     background: url("../imgs/scene2/alice-s2-background.png");
     background-repeat: no-repeat; }
   #rabbit-hole #hole-dots {
@@ -180,12 +181,15 @@ canvas {
     background-repeat: no-repeat; }
   #rabbit-hole .falling-next {
     position: absolute;
-    background-color: white;
-    border: 1.5em solid white;
+    background-color: #34ad65;
+    color: white;
+    border-radius: 50px;
     font-family: "Josefin Slab", serif;
-    margin-top: -115vh;
-    margin-left: 80vw;
-    z-index: 10; }
+    margin-top: -120vh;
+    margin-left: 65vw;
+    width: 100px;
+    height: 100px;
+    z-index: 100; }
 
 #rabbit-hole-text {
   display: none;
@@ -229,13 +233,15 @@ canvas {
     overflow: hidden; }
   #falling #hallway-next {
     position: absolute;
-    background-color: #7e0f7d;
+    background-color: #5ec3f3;
     color: white;
-    border: 1.5em solid #7e0f7d;
+    border-radius: 50px;
     font-family: "Josefin Slab", serif;
-    margin-top: 20px;
-    margin-left: 80vw;
-    z-index: 10; }
+    margin-top: -15vh;
+    margin-left: 67vw;
+    width: 100px;
+    height: 100px;
+    z-index: 100; }
 
 #falling-text {
   display: none; }
@@ -271,11 +277,13 @@ canvas {
   position: absolute;
   background-color: #7e0f7d;
   color: white;
-  border: 1.5em solid #7e0f7d;
+  border-radius: 50px;
   font-family: "Josefin Slab", serif;
-  margin-top: 20px;
-  margin-left: 80vw;
-  z-index: 10; }
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 100px;
+  height: 100px;
+  z-index: 1; }
 
 /*----glass table----*/
 #glass-table {
@@ -317,11 +325,13 @@ canvas {
   position: absolute;
   background-color: #7e0f7d;
   color: white;
-  border: 1.5em solid #7e0f7d;
+  border-radius: 50px;
   font-family: "Josefin Slab", serif;
-  margin-top: 20px;
-  margin-left: 80vw;
-  z-index: 10; }
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 100px;
+  height: 100px;
+  z-index: 20; }
 
 /*----glimpse of wonderland----*/
 #glimpse {

@@ -196,6 +196,7 @@ canvas {
   #s2-background{
     width: 200vw;
     height: 200vh;
+    background-size: 250vh;
     background: url('../imgs/scene2/alice-s2-background.png');
     background-repeat: no-repeat;
   }
@@ -212,12 +213,15 @@ canvas {
 
   .falling-next{
     position: absolute;
-    background-color: white;
-    border: 1.5em solid white;
+    background-color: rgb(52, 173, 101); 
+    color: white;
+    border-radius: 50px;
     font-family: $josefin;
-    margin-top: -115vh;
-    margin-left: 80vw;
-    z-index: 10;
+    margin-top: -120vh;
+    margin-left: 65vw;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
   }
 }
 #rabbit-hole-text{
@@ -274,13 +278,15 @@ canvas {
 
  #hallway-next{
     position: absolute;
-    background-color: #7e0f7d; 
+    background-color: rgb(94, 195, 243); 
     color: white;
-    border: 1.5em solid #7e0f7d;
-    font-family: $josefin;  
-    margin-top: 20px; 
-    margin-left: 80vw;
-    z-index: 10;
+    border-radius: 50px;
+    font-family: $josefin;
+    margin-top: -15vh;
+    margin-left: 67vw;
+    width: 100px;
+    height: 100px;
+    z-index: 100;
  }
 }  
 
@@ -325,11 +331,13 @@ canvas {
   position: absolute;
   background-color: #7e0f7d; 
   color: white;
-  border: 1.5em solid #7e0f7d;
-  font-family: $josefin;  
-  margin-top: 20px; 
-  margin-left: 80vw;
-  z-index: 10;
+  border-radius: 50px;
+  font-family: $josefin;
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
 }
 
 
@@ -385,11 +393,13 @@ canvas {
   position: absolute;
   background-color: #7e0f7d; 
   color: white;
-  border: 1.5em solid #7e0f7d;
-  font-family: $josefin;  
-  margin-top: 20px; 
-  margin-left: 80vw;
-  z-index: 10;
+  border-radius: 50px;
+  font-family: $josefin;
+  margin-top: -15vh;
+  margin-left: 67vw;
+  width: 100px;
+  height: 100px;
+  z-index: 20;
 }
 
 /*----glimpse of wonderland----*/
