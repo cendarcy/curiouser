@@ -26,10 +26,9 @@ nav {
   z-index: 1;
   border: 1.5em solid black;
   width: 97vw;
-  height: 93vh; }
+  height: 95vh; }
   .opener .dropcaps {
     display: inline;
-    margin-left: 5vw;
     margin-bottom: -170px;
     margin-right: -80px;
     margin-top: -20px; }
@@ -38,17 +37,17 @@ nav {
     font-size: 150px;
     display: inline; }
   .opener h2 {
-    margin-left: 32vw;
+    margin-left: 30vw;
     font-size: 90px; }
   .opener #special {
     margin-top: -4vh;
-    margin-left: 36vw;
+    margin-left: 32vw;
     font-size: 135px; }
 
 .click-announce {
   font-family: "Josefin Slab", serif;
   font-size: 20px;
-  margin-top: -10vh;
+  margin-top: -15vh;
   margin-left: 37vw;
   border: 1px solid black;
   width: 250px;
@@ -94,24 +93,39 @@ canvas {
 #parallaxContainer {
   top: 0;
   border: 1.5em solid black;
+  right: inherit;
   width: 220vw;
   height: 98vh;
   left: 23px !important;
-  display: none; }
+  display: none;
+  overflow: hidden; }
   #parallaxContainer .layer1 {
     position: absolute;
     width: 172vw;
-    height: 100%;
-    background: url("../imgs/scene1/alice-s1.1.png");
-    background-size: 400vh;
+    height: 200vh;
+    background: url("../imgs/scene1/alice-s1-sky.png");
+    background-size: 320vh;
     background-repeat: no-repeat; }
   #parallaxContainer .layer2 {
     position: absolute;
-    width: 200vw;
-    height: 100%;
+    width: 240vw;
+    height: 100vh;
     background-size: 400vh;
-    background: url("../imgs/scene1/alice-s1.cloud.png");
+    background: url("../imgs/scene1/alice-s1-clouds.png");
     background-repeat: repeat; }
+  #parallaxContainer .white-rabbit {
+    position: absolute;
+    margin-left: 155vw;
+    margin-top: 47vh;
+    background-repeat: no-repeat; }
+  #parallaxContainer .hill {
+    position: absolute;
+    background: url("../imgs/scene1/alice-s1-hill.png");
+    background-repeat: no-repeat;
+    margin-left: 138vw;
+    margin-top: 45vh;
+    width: 100%;
+    height: 100%; }
   #parallaxContainer .layer3 {
     position: absolute;
     width: 220vw;
@@ -120,11 +134,18 @@ canvas {
     background: url("../imgs/scene1/alice-s1-landscape.png");
     background-size: 400vh;
     background-repeat: no-repeat; }
-  #parallaxContainer .white-rabbit {
-    height: 100%;
-    width: 100%;
-    background: url("../imgs/scene1/alice-s0-white-rabbit.png");
-    background-repeat: no-repeat; }
+  #parallaxContainer .rabbit-next {
+    position: absolute;
+    background-color: #7e0f7d;
+    color: white;
+    border-radius: 50px;
+    font-family: "Josefin Slab", serif;
+    padding-top: 10px;
+    margin-top: 80vh;
+    margin-left: 150vw;
+    width: 100px;
+    height: 100px;
+    z-index: 1; }
 
 #parallax1 {
   position: absolute;
@@ -140,54 +161,166 @@ canvas {
   opacity: 1;
   display: none; }
 
-#trigger1 {
-  color: black; }
-
-#rabbit-hole #s2-background {
+/*----rabbit hole----*/
+#rabbit-hole {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
   width: 100vw;
-  height: 100vh;
-  background: url("../imgs/scene2/alice-s2-background.png");
+  height: 97vh;
+  left: 23px !important;
   display: none;
-  background-repeat: none; }
-#rabbit-hole #dots {
-  background: url("../imgs/scene2/hole-dots.png");
-  display: none;
-  background-repeat: none; }
-#rabbit-hole #rabbit-hole-text {
+  overflow: hidden; }
+  #rabbit-hole #s2-background {
+    width: 200vw;
+    height: 200vh;
+    background: url("../imgs/scene2/alice-s2-background.png");
+    background-repeat: no-repeat; }
+  #rabbit-hole #hole-dots {
+    background: url("../imgs/scene2/hole-dots.png");
+    width: 200vw;
+    height: 200vh;
+    margin-top: -200vh;
+    margin-left: 45vw;
+    z-index: 10;
+    background-repeat: no-repeat; }
+  #rabbit-hole .falling-next {
+    position: absolute;
+    background-color: white;
+    border: 1.5em solid white;
+    font-family: "Josefin Slab", serif;
+    margin-top: -115vh;
+    margin-left: 80vw;
+    z-index: 10; }
+
+#rabbit-hole-text {
   display: none;
   font-family: "Source Sans Pro", sans-serif; }
 
-#falling #alice-falling {
-  background: url("../imgs/scene3/alice-falling.png");
+/*----falling----*/
+#falling {
   display: none;
-  background-repeat: none; }
-#falling #s3-background {
-  background: url("../imgs/scene3/s3-background.png");
-  display: none;
-  background-repeat: none; }
-#falling #bright-dots {
-  background: url("../imgs/scene3/alice-s3-bright-dots.png");
-  display: none;
-  background-repeat: none; }
-#falling #grey-dots {
-  background: url("../imgs/scene3/alice-s3-grey-dots.png");
-  display: none;
-  background-repeat: none; }
-#falling #falling-text {
+  /* =====do parallax instead====*/ }
+  #falling #s3-background {
+    width: 100vw;
+    height: 600vh;
+    background-color: black; }
+  #falling #alice-falling {
+    position: fixed;
+    width: 100vw;
+    height: 600vh;
+    margin-top: -600vh;
+    margin-left: 40vw;
+    background: url("../imgs/scene3/alice-falling.png");
+    background-repeat: no-repeat; }
+  #falling #bright-dots {
+    background: url("../imgs/scene3/alice-s3-bright-dots.png");
+    width: 300vw;
+    height: 600vh;
+    margin-top: -600vh;
+    background-repeat: no-repeat repeat;
+    overflow: hidden; }
+  #falling #grey-dots {
+    background: url("../imgs/scene3/alice-s3-grey-dots.png");
+    width: 300vw;
+    height: 600vh;
+    margin-top: -600vh;
+    background-repeat: no-repeat repeat;
+    overflow: hidden; }
+  #falling #hallway-next {
+    position: absolute;
+    background-color: #7e0f7d;
+    color: white;
+    border: 1.5em solid #7e0f7d;
+    font-family: "Josefin Slab", serif;
+    margin-top: 20px;
+    margin-left: 80vw;
+    z-index: 10; }
+
+#falling-text {
   display: none; }
 
-#hallway #s4-hallway {
-  background: url("../imgs/scene4/alice-s4-background.png");
+/*----hallway----*/
+#hallway {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left: 23px !important;
   display: none;
-  background-repeat: none; }
-#hallway #s4-dots {
-  background: url("../imgs/scene4/alice-s4-dots.png");
-  display: none;
-  background-repeat: none; }
+  overflow: hidden; }
+  #hallway #s4-background {
+    width: 100vw;
+    height: 100vh;
+    background: url("../imgs/scene4/alice-s4-background.png");
+    background-repeat: no-repeat; }
+  #hallway #s4-dots {
+    position: absolute;
+    margin-top: -100vh;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: url("../imgs/scene4/alice-s4-dots.png");
+    background-repeat: no-repeat; }
 
-#glimpse #s6-wonderland {
-  background: url("../imgs/scene6/alice-s6.png");
+#hallway-text {
+  display: none; }
+
+#glass-next {
+  position: absolute;
+  background-color: #7e0f7d;
+  color: white;
+  border: 1.5em solid #7e0f7d;
+  font-family: "Josefin Slab", serif;
+  margin-top: 20px;
+  margin-left: 80vw;
+  z-index: 10; }
+
+/*----glass table----*/
+#glass-table {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left: 23px !important;
   display: none;
-  background-repeat: none; }
+  overflow: hidden; }
+  #glass-table #s5-background {
+    width: 100vw;
+    height: 100vh;
+    background: url("../imgs/scene5/alice-s5-background.png");
+    background-repeat: no-repeat; }
+  #glass-table #s5-alice {
+    width: 100vw;
+    height: 100vh;
+    background: url("../imgs/scene5/alice-s5-alice.png");
+    background-repeat: no-repeat; }
+  #glass-table #s5-dots {
+    width: 100vw;
+    height: 100vh;
+    background: url("../imgs/scene5/alice-s5-dots.png");
+    background-repeat: no-repeat; }
+
+#glass-table-text {
+  display: none; }
+
+/*----glimpse of wonderland----*/
+#glimpse {
+  top: 0;
+  border: 1.5em solid black;
+  right: inherit;
+  width: 100vw;
+  height: 97vh;
+  left: 23px !important;
+  display: none;
+  overflow: hidden; }
+  #glimpse #s6-wonderland {
+    background: url("../imgs/scene6/alice-s6.png");
+    background-repeat: no-repeat; }
+
+#glimpse-text {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
