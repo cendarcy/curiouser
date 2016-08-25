@@ -2,7 +2,7 @@ nav {
   position: fixed;
   margin-top: -80vh;
   margin-left: -15px;
-  z-index: 100; }
+  z-index: 200; }
   nav ul li {
     list-style: none;
     padding: 5px 10px;
@@ -92,27 +92,29 @@ canvas {
 
 #parallaxContainer {
   top: 0;
+  left: 0;
   border: 1.5em solid black;
-  right: inherit;
-  width: 220vw;
+  width: 200vw;
   height: 98vh;
   left: 23px !important;
   display: none;
   overflow: hidden; }
   #parallaxContainer .layer1 {
     position: absolute;
-    width: 172vw;
-    height: 200vh;
-    background: url("../imgs/scene1/alice-s1-sky.png");
-    background-size: 320vh;
+    left: 0;
+    width: 203vw;
+    height: 100%;
+    overflow: hidden;
+    background: url("../imgs/scene1/alice-s1-landscape.png");
+    background-size: 380vh;
     background-repeat: no-repeat; }
   #parallaxContainer .layer2 {
+    left: 0;
     position: absolute;
-    width: 240vw;
+    width: 200vw;
     height: 100vh;
-    background-size: 400vh;
     background: url("../imgs/scene1/alice-s1-clouds.png");
-    background-repeat: repeat; }
+    background-repeat: no-repeat; }
   #parallaxContainer .white-rabbit {
     position: absolute;
     margin-left: 155vw;
@@ -122,25 +124,17 @@ canvas {
     position: absolute;
     background: url("../imgs/scene1/alice-s1-hill.png");
     background-repeat: no-repeat;
-    margin-left: 138vw;
-    margin-top: 45vh;
-    width: 100%;
-    height: 100%; }
-  #parallaxContainer .layer3 {
-    position: absolute;
-    width: 220vw;
-    height: 100%;
-    overflow: hidden;
-    background: url("../imgs/scene1/alice-s1-landscape.png");
-    background-size: 400vh;
-    background-repeat: no-repeat; }
+    background-size: 80vh;
+    margin-left: 135vw;
+    margin-top: 27vh;
+    width: 50vw;
+    height: 50vh; }
   #parallaxContainer .rabbit-next {
     position: absolute;
     background-color: #7e0f7d;
     color: white;
     border-radius: 50px;
     font-family: "Josefin Slab", serif;
-    padding-top: 10px;
     margin-top: 80vh;
     margin-left: 150vw;
     width: 100px;
@@ -199,6 +193,8 @@ canvas {
 
 /*----falling----*/
 #falling {
+  width: 100vw;
+  height: 600vh;
   display: none;
   /* =====do parallax instead====*/ }
   #falling #s3-background {
@@ -214,17 +210,21 @@ canvas {
     background: url("../imgs/scene3/alice-falling.png");
     background-repeat: no-repeat; }
   #falling #bright-dots {
+    position: absolute;
     background: url("../imgs/scene3/alice-s3-bright-dots.png");
-    width: 300vw;
+    width: 100vw;
     height: 600vh;
     margin-top: -600vh;
+    z-index: 10;
     background-repeat: no-repeat repeat;
     overflow: hidden; }
   #falling #grey-dots {
+    position: absolute;
     background: url("../imgs/scene3/alice-s3-grey-dots.png");
-    width: 300vw;
+    width: 100vw;
     height: 600vh;
     margin-top: -600vh;
+    z-index: 10;
     background-repeat: no-repeat repeat;
     overflow: hidden; }
   #falling #hallway-next {
@@ -293,11 +293,18 @@ canvas {
     background: url("../imgs/scene5/alice-s5-background.png");
     background-repeat: no-repeat; }
   #glass-table #s5-alice {
+    position: absolute;
+    z-index: 10;
+    margin-top: -60vh;
+    margin-left: 60vw;
     width: 100vw;
     height: 100vh;
     background: url("../imgs/scene5/alice-s5-alice.png");
     background-repeat: no-repeat; }
   #glass-table #s5-dots {
+    position: absolute;
+    z-index: 10;
+    margin-top: -100vh;
     width: 100vw;
     height: 100vh;
     background: url("../imgs/scene5/alice-s5-dots.png");
@@ -305,6 +312,16 @@ canvas {
 
 #glass-table-text {
   display: none; }
+
+#wonderland-next {
+  position: absolute;
+  background-color: #7e0f7d;
+  color: white;
+  border: 1.5em solid #7e0f7d;
+  font-family: "Josefin Slab", serif;
+  margin-top: 20px;
+  margin-left: 80vw;
+  z-index: 10; }
 
 /*----glimpse of wonderland----*/
 #glimpse {
@@ -317,6 +334,8 @@ canvas {
   display: none;
   overflow: hidden; }
   #glimpse #s6-wonderland {
+    width: 100vw;
+    height: 100vh;
     background: url("../imgs/scene6/alice-s6.png");
     background-repeat: no-repeat; }
 
