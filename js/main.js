@@ -39,11 +39,12 @@ $(document).ready(function(){
           .addTo(controller);
       });
   })
-   $(this).remove()
+  $(this).remove()
 })  
-// =====vertical parallax=====
 
-
+// =====text business=====
+  // var tl = new TimelineLite();
+  // tl.from("#text-beginning", 0.5{left:100, autoAlpha:0, display: 'block'})
 
 
 

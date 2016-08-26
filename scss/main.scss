@@ -157,24 +157,30 @@ canvas {
     width: 100px;
     height: 100px;
     z-index: 1;
+    font-size: 30px;
+  }
+}
+
+#page-1-text{
+  background-color: #000000eb;
+  display: block;
+  position: absolute;
+  font-family: $source;
+  color: white;
+  z-index: 1;
+  width: 50vw;
+  height: 20vh;
+  font-size: 20px;
+  
+  p1{
+    margin-left: 50vw;
+    margin-top: 80vh;
+
   }
 
 }
 
-#parallax1 {
-    position: absolute;
-    font-family: $source;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    width: 500px;
-    float: right;
-    margin-top: -10vh;
-    margin-right: 20vw;
-    background-color:black;
-    opacity: 1;
-    display: none;
-  }
+
 
 #trigger1{
 }
@@ -222,11 +228,23 @@ canvas {
     width: 100px;
     height: 100px;
     z-index: 100;
+    font-size: 30px;
   }
-}
-#rabbit-hole-text{
-  display: none;
+  
+  #rabbit-hole-text{
+  background-color: #000000eb;
+  display: block;
+  position: absolute;
   font-family: $source;
+  color: white;
+  z-index: 1;
+  margin-top: 50vh;
+  margin-left: 20px;
+  width: 50vw;
+  height: 20vh;
+  font-size: 30px;
+  
+  }
 }
 
 
@@ -236,6 +254,26 @@ canvas {
   width: 100vw;
   height: 600vh;
   display: none;
+
+  #falling-text{
+    background-color: black;
+    float: right;
+    display: block;
+    position: absolute;
+    font-family: $source;
+    color: white;
+    z-index: 100;
+    margin-top: 40vh;
+    margin-left: 69vw;
+    width: 30vw;
+    height: 200vh;
+    font-size: 24px;
+
+    div{
+      padding-top: 30px;
+    }
+  
+  }
 
   #s3-background{
     width: 100vw;
@@ -287,12 +325,11 @@ canvas {
     width: 100px;
     height: 100px;
     z-index: 100;
+    font-size: 30px;
  }
 }  
 
-#falling-text{
-  display: none;
-}
+
 
 /*----hallway----*/
 
@@ -305,6 +342,21 @@ canvas {
   left:23px !important;
   display: none;
   overflow: hidden;
+
+  #hallway-text {
+   /* background-color: #000000eb;*/
+    display: block;
+    position: absolute;
+    font-family: $source;
+    color: black;
+    z-index: 10;
+    margin-top: 45vh;
+    margin-left: 30vw;
+    width: 50vw;
+    height: 20vh;
+    font-size: 20px;
+  }
+
 
   #s4-background{
     width: 100vw;
@@ -324,9 +376,7 @@ canvas {
   }
 }
 
-#hallway-text {
-  display: none;
-}
+
 #glass-next {
   position: absolute;
   background-color: #7e0f7d; 
@@ -353,6 +403,20 @@ canvas {
   left:23px !important;
   display: none;
   overflow: hidden;
+
+  #glass-table-text{
+    display: block;
+    position: absolute;
+    font-family: $source;
+    color: black;
+    z-index: 100;
+    margin-left: 42vw;
+    margin-top: 81px;
+    width: 31vw;
+    /* height: 8vh; */
+    font-size: 18px;
+  }
+
 
   #s5-background{
     width: 100vw;
@@ -384,11 +448,6 @@ canvas {
 
 }
 
-#glass-table-text{
-  display: none;
-}
-
-
 #wonderland-next {
   position: absolute;
   background-color: #7e0f7d; 
@@ -413,19 +472,31 @@ canvas {
   left:23px !important;
   display: none;
   overflow: hidden;
+  background-color: black;
+
+  #glimpse-text{
+    display: block;
+    position: absolute;
+    font-family: $source;
+    color: white;
+    z-index: 10;
+    margin-left: 30px;
+    margin-top: 76vh;
+    width: 80vw;
+    height: 20vh;
+    font-size: 20px;
+  }
+
 
   #s6-wonderland{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url('../imgs/scene6/alice-s6.png');
     background-repeat: no-repeat;
   }
 
 }
 
-#glimpse-text{
-    display: none;
-}
 
 
 

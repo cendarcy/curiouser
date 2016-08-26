@@ -139,21 +139,22 @@ canvas {
     margin-left: 150vw;
     width: 100px;
     height: 100px;
-    z-index: 1; }
+    z-index: 1;
+    font-size: 30px; }
 
-#parallax1 {
+#page-1-text {
+  background-color: #000000eb;
+  display: block;
   position: absolute;
   font-family: "Source Sans Pro", sans-serif;
-  z-index: 1;
   color: white;
-  text-align: center;
-  width: 500px;
-  float: right;
-  margin-top: -10vh;
-  margin-right: 20vw;
-  background-color: black;
-  opacity: 1;
-  display: none; }
+  z-index: 1;
+  width: 50vw;
+  height: 20vh;
+  font-size: 20px; }
+  #page-1-text p1 {
+    margin-left: 50vw;
+    margin-top: 80vh; }
 
 /*----rabbit hole----*/
 #rabbit-hole {
@@ -189,11 +190,20 @@ canvas {
     margin-left: 65vw;
     width: 100px;
     height: 100px;
-    z-index: 100; }
-
-#rabbit-hole-text {
-  display: none;
-  font-family: "Source Sans Pro", sans-serif; }
+    z-index: 100;
+    font-size: 30px; }
+  #rabbit-hole #rabbit-hole-text {
+    background-color: #000000eb;
+    display: block;
+    position: absolute;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    z-index: 1;
+    margin-top: 50vh;
+    margin-left: 20px;
+    width: 50vw;
+    height: 20vh;
+    font-size: 30px; }
 
 /*----falling----*/
 #falling {
@@ -201,6 +211,21 @@ canvas {
   height: 600vh;
   display: none;
   /* =====do parallax instead====*/ }
+  #falling #falling-text {
+    background-color: black;
+    float: right;
+    display: block;
+    position: absolute;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    z-index: 100;
+    margin-top: 40vh;
+    margin-left: 69vw;
+    width: 30vw;
+    height: 200vh;
+    font-size: 24px; }
+    #falling #falling-text div {
+      padding-top: 30px; }
   #falling #s3-background {
     width: 100vw;
     height: 600vh;
@@ -241,10 +266,8 @@ canvas {
     margin-left: 67vw;
     width: 100px;
     height: 100px;
-    z-index: 100; }
-
-#falling-text {
-  display: none; }
+    z-index: 100;
+    font-size: 30px; }
 
 /*----hallway----*/
 #hallway {
@@ -256,6 +279,18 @@ canvas {
   left: 23px !important;
   display: none;
   overflow: hidden; }
+  #hallway #hallway-text {
+    /* background-color: #000000eb;*/
+    display: block;
+    position: absolute;
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+    z-index: 10;
+    margin-top: 45vh;
+    margin-left: 30vw;
+    width: 50vw;
+    height: 20vh;
+    font-size: 20px; }
   #hallway #s4-background {
     width: 100vw;
     height: 100vh;
@@ -269,9 +304,6 @@ canvas {
     z-index: 1;
     background: url("../imgs/scene4/alice-s4-dots.png");
     background-repeat: no-repeat; }
-
-#hallway-text {
-  display: none; }
 
 #glass-next {
   position: absolute;
@@ -295,6 +327,17 @@ canvas {
   left: 23px !important;
   display: none;
   overflow: hidden; }
+  #glass-table #glass-table-text {
+    display: block;
+    position: absolute;
+    font-family: "Source Sans Pro", sans-serif;
+    color: black;
+    z-index: 100;
+    margin-left: 42vw;
+    margin-top: 81px;
+    width: 31vw;
+    /* height: 8vh; */
+    font-size: 18px; }
   #glass-table #s5-background {
     width: 100vw;
     height: 100vh;
@@ -318,9 +361,6 @@ canvas {
     background: url("../imgs/scene5/alice-s5-dots.png");
     background-repeat: no-repeat; }
 
-#glass-table-text {
-  display: none; }
-
 #wonderland-next {
   position: absolute;
   background-color: #7e0f7d;
@@ -342,14 +382,23 @@ canvas {
   height: 97vh;
   left: 23px !important;
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: black; }
+  #glimpse #glimpse-text {
+    display: block;
+    position: absolute;
+    font-family: "Source Sans Pro", sans-serif;
+    color: white;
+    z-index: 10;
+    margin-left: 30px;
+    margin-top: 76vh;
+    width: 80vw;
+    height: 20vh;
+    font-size: 20px; }
   #glimpse #s6-wonderland {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: url("../imgs/scene6/alice-s6.png");
     background-repeat: no-repeat; }
-
-#glimpse-text {
-  display: none; }
 
 /*# sourceMappingURL=main.css.map */
