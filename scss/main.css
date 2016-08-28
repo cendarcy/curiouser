@@ -11,22 +11,42 @@ nav {
     nav ul li:hover {
       background-color: #a1ffc1; }
     nav ul li a {
-      font-family: "Josefin Slab", serif;
+      font-family: "Josefin Sans", sans-serif;
       text-decoration: none;
       color: #7e0f7d;
       font-size: 20px; }
 
+/*--------keyframes------*/
+@keyframes paragraph1 {
+  from {
+    transform: translateY(50vw); }
+  to {
+    transform: translateY(2vw); } }
+@keyframes arrow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1);
+    color: #4b7d3c; }
+  100% {
+    transform: scale(1); } }
+@keyframes rabbit {
+  from {
+    transform: translateX(200vw); }
+  to {
+    transform: translateX(250vw); } }
+/*----beginning main css----*/
 * {
   margin-top: 0px;
   margin-left: 0px; }
 
 .opener {
-  font-family: "Josefin Slab", serif;
+  font-family: "Josefin Sans", sans-serif;
   opacity: 1;
   z-index: 1;
   border: 1.5em solid black;
   width: 97vw;
-  height: 95vh; }
+  height: 99vh; }
   .opener .dropcaps {
     display: inline;
     margin-bottom: -170px;
@@ -45,7 +65,7 @@ nav {
     font-size: 135px; }
 
 .click-announce {
-  font-family: "Josefin Slab", serif;
+  font-family: "Lato", sans-serif;
   font-size: 20px;
   margin-top: -15vh;
   margin-left: 37vw;
@@ -62,7 +82,7 @@ canvas {
 #particles-js {
   position: absolute;
   width: 98vw;
-  height: 97vh;
+  height: 99vh;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 50% 50%; }
@@ -72,7 +92,7 @@ canvas {
   margin-top: -97vh;
   color: black;
   width: 98vw;
-  height: 97vh; }
+  height: 99vh; }
 
 /*----begin chapter 1 announcement----*/
 .announcement {
@@ -83,11 +103,11 @@ canvas {
   .announcement h2 {
     margin-top: 14vh;
     margin-left: 34vw;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     font-size: 90px; }
   .announcement h4 {
-    margin-left: 21vw;
-    font-family: "Josefin Slab", serif;
+    margin-left: 24vw;
+    font-family: "Josefin Sans", sans-serif;
     font-size: 80px; }
 
 #parallaxContainer {
@@ -98,7 +118,8 @@ canvas {
   height: 98vh;
   left: 23px !important;
   display: none;
-  overflow: hidden; }
+  overflow: hidden;
+  overflow-x: hidden; }
   #parallaxContainer .layer1 {
     position: absolute;
     left: 0;
@@ -108,6 +129,17 @@ canvas {
     background: url("../imgs/scene1/alice-s1-landscape.png");
     background-size: 380vh;
     background-repeat: no-repeat; }
+  #parallaxContainer i.fa-arrow-right {
+    margin-top: 70vh;
+    margin-left: 52vw;
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    opacity: 1;
+    animation-name: arrow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-delay: 10s; }
   #parallaxContainer .layer2 {
     left: 0;
     position: absolute;
@@ -117,16 +149,21 @@ canvas {
     background-repeat: no-repeat; }
   #parallaxContainer .white-rabbit {
     position: absolute;
-    margin-left: 155vw;
+    margin-left: -100vw;
     margin-top: 47vh;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    animation-name: rabbit;
+    animation-duration: 10s;
+    animation-delay: 10s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: both; }
   #parallaxContainer .hill {
     position: absolute;
     background: url("../imgs/scene1/alice-s1-hill.png");
     background-repeat: no-repeat;
     background-size: 80vh;
     margin-left: 135vw;
-    margin-top: 27vh;
+    margin-top: 28vh;
     width: 50vw;
     height: 50vh; }
   #parallaxContainer .rabbit-next {
@@ -134,11 +171,13 @@ canvas {
     background-color: #7e0f7d;
     color: white;
     border-radius: 50px;
-    font-family: "Josefin Slab", serif;
+    font-family: "Josefin Sans", sans-serif;
     margin-top: 80vh;
     margin-left: 150vw;
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
     z-index: 1;
     font-size: 30px; }
 
@@ -146,15 +185,24 @@ canvas {
   background-color: #000000eb;
   display: block;
   position: absolute;
-  font-family: "Source Sans Pro", sans-serif;
-  color: white;
+  font-family: "Lato", sans-serif;
+  color: black;
   z-index: 1;
   width: 50vw;
   height: 20vh;
   font-size: 20px; }
-  #page-1-text p1 {
-    margin-left: 50vw;
-    margin-top: 80vh; }
+  #page-1-text div#p1 {
+    margin-top: 2vh;
+    animation-name: paragraph1;
+    animation-duration: 10s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forward; }
+  #page-1-text div#p2 {
+    margin-left: 77vw;
+    margin-top: -14vh;
+    width: 50vw;
+    float: left; }
 
 /*----rabbit hole----*/
 #rabbit-hole {
@@ -165,7 +213,7 @@ canvas {
   height: 97vh;
   left: 23px !important;
   display: none;
-  overflow: hidden; }
+  overflow-x: hidden; }
   #rabbit-hole #s2-background {
     width: 200vw;
     height: 200vh;
@@ -185,25 +233,27 @@ canvas {
     background-color: #34ad65;
     color: white;
     border-radius: 50px;
-    font-family: "Josefin Slab", serif;
+    font-family: "Josefin Sans", sans-serif;
     margin-top: -120vh;
     margin-left: 65vw;
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
     z-index: 100;
     font-size: 30px; }
   #rabbit-hole #rabbit-hole-text {
     background-color: #000000eb;
     display: block;
     position: absolute;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     color: white;
     z-index: 1;
     margin-top: 50vh;
     margin-left: 20px;
     width: 50vw;
     height: 20vh;
-    font-size: 30px; }
+    font-size: 24px; }
 
 /*----falling----*/
 #falling {
@@ -211,12 +261,27 @@ canvas {
   height: 600vh;
   display: none;
   /* =====do parallax instead====*/ }
+  #falling .fa-arrow-down {
+    position: absolute;
+    color: white;
+    font-size: 60px;
+    margin-top: 8vh;
+    margin-left: 30vw; }
+  #falling #marmelaide {
+    position: absolute;
+    background-image: url("../imgs/marmelaide.png");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*width: 50%;
+    height: 50%;*/ }
   #falling #falling-text {
     background-color: black;
     float: right;
     display: block;
     position: absolute;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     color: white;
     z-index: 100;
     margin-top: 40vh;
@@ -261,11 +326,13 @@ canvas {
     background-color: #5ec3f3;
     color: white;
     border-radius: 50px;
-    font-family: "Josefin Slab", serif;
+    font-family: "Josefin Sans", sans-serif;
     margin-top: -15vh;
     margin-left: 67vw;
-    width: 100px;
-    height: 100px;
+    width: 65px;
+    height: 50px;
+    padding-top: 15px;
+    padding-left: 5px;
     z-index: 100;
     font-size: 30px; }
 
@@ -283,7 +350,7 @@ canvas {
     /* background-color: #000000eb;*/
     display: block;
     position: absolute;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     color: black;
     z-index: 10;
     margin-top: 45vh;
@@ -310,12 +377,15 @@ canvas {
   background-color: #7e0f7d;
   color: white;
   border-radius: 50px;
-  font-family: "Josefin Slab", serif;
+  font-family: "Josefin Sans", sans-serif;
   margin-top: -15vh;
   margin-left: 67vw;
-  width: 100px;
-  height: 100px;
-  z-index: 1; }
+  width: 65px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 5px;
+  z-index: 1;
+  font-size: 30px; }
 
 /*----glass table----*/
 #glass-table {
@@ -330,14 +400,15 @@ canvas {
   #glass-table #glass-table-text {
     display: block;
     position: absolute;
-    font-family: "Source Sans Pro", sans-serif;
-    color: black;
+    font-family: "Lato", sans-serif;
+    color: white;
     z-index: 100;
     margin-left: 42vw;
     margin-top: 81px;
     width: 31vw;
     /* height: 8vh; */
-    font-size: 18px; }
+    font-size: 18px;
+    background-color: #656565; }
   #glass-table #s5-background {
     width: 100vw;
     height: 100vh;
@@ -346,7 +417,7 @@ canvas {
   #glass-table #s5-alice {
     position: absolute;
     z-index: 10;
-    margin-top: -60vh;
+    margin-top: -45vh;
     margin-left: 60vw;
     width: 100vw;
     height: 100vh;
@@ -366,12 +437,15 @@ canvas {
   background-color: #7e0f7d;
   color: white;
   border-radius: 50px;
-  font-family: "Josefin Slab", serif;
+  font-family: "Josefin Sans", sans-serif;
   margin-top: -15vh;
   margin-left: 67vw;
-  width: 100px;
-  height: 100px;
-  z-index: 20; }
+  width: 65px;
+  height: 50px;
+  padding-top: 15px;
+  padding-left: 5px;
+  z-index: 20;
+  font-size: 30px; }
 
 /*----glimpse of wonderland----*/
 #glimpse {
@@ -387,7 +461,7 @@ canvas {
   #glimpse #glimpse-text {
     display: block;
     position: absolute;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Lato", sans-serif;
     color: white;
     z-index: 10;
     margin-left: 30px;
