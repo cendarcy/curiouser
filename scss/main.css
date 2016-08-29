@@ -21,7 +21,12 @@ nav {
   from {
     transform: translateY(50vw); }
   to {
-    transform: translateY(2vw); } }
+    transform: translateY(1vw); } }
+@keyframes paragraph2 {
+  from {
+    transform: translateY(-37vh); }
+  to {
+    transform: translateY(21vh); } }
 @keyframes arrow {
   0% {
     transform: scale(1); }
@@ -35,6 +40,24 @@ nav {
     transform: translateX(200vw); }
   to {
     transform: translateX(250vw); } }
+@keyframes paragraph3 {
+  from {
+    transform: translateX(-50vw); }
+  to {
+    transform: translateX(20px); } }
+@keyframes rabbit-hole-dots {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(1turn); } }
+@keyframes down-arrow {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1);
+    color: #369B1B; }
+  100% {
+    transform: scale(1); } }
 /*----beginning main css----*/
 * {
   margin-top: 0px;
@@ -136,10 +159,7 @@ canvas {
     color: white;
     font-size: 40px;
     opacity: 1;
-    animation-name: arrow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-delay: 10s; }
+    animation: arrow 3s infinite 5s; }
   #parallaxContainer .layer2 {
     left: 0;
     position: absolute;
@@ -154,8 +174,8 @@ canvas {
     background-repeat: no-repeat;
     animation-name: rabbit;
     animation-duration: 10s;
-    animation-delay: 10s;
-    animation-timing-function: ease-in;
+    animation-delay: 15s;
+    animation-timing-function: ease;
     animation-fill-mode: both; }
   #parallaxContainer .hill {
     position: absolute;
@@ -180,6 +200,10 @@ canvas {
     padding-left: 5px;
     z-index: 1;
     font-size: 30px; }
+    #parallaxContainer .rabbit-next:hover {
+      background-color: #5AAD15;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; }
 
 #page-1-text {
   background-color: #000000eb;
@@ -194,15 +218,21 @@ canvas {
   #page-1-text div#p1 {
     margin-top: 2vh;
     animation-name: paragraph1;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-timing-function: ease-in;
     animation-iteration-time: 1;
-    animation-fill-mode: forward; }
+    animation-fill-mode: forwards; }
   #page-1-text div#p2 {
     margin-left: 77vw;
-    margin-top: -14vh;
+    margin-top: -37vh;
     width: 50vw;
-    float: left; }
+    float: left;
+    animation-name: paragraph2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 6s; }
 
 /*----rabbit hole----*/
 #rabbit-hole {
@@ -227,7 +257,8 @@ canvas {
     margin-top: -200vh;
     margin-left: 45vw;
     z-index: 10;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    animation: rabbit-hole-dots 10s ease infinite; }
   #rabbit-hole .falling-next {
     position: absolute;
     background-color: #34ad65;
@@ -242,6 +273,10 @@ canvas {
     padding-left: 5px;
     z-index: 100;
     font-size: 30px; }
+    #rabbit-hole .falling-next:hover {
+      background-color: #CF3E79;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; }
   #rabbit-hole #rabbit-hole-text {
     background-color: #000000eb;
     display: block;
@@ -253,7 +288,12 @@ canvas {
     margin-left: 20px;
     width: 50vw;
     height: 20vh;
-    font-size: 24px; }
+    font-size: 24px;
+    animation-name: paragraph3;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards; }
 
 /*----falling----*/
 #falling {
@@ -266,7 +306,8 @@ canvas {
     color: white;
     font-size: 60px;
     margin-top: 8vh;
-    margin-left: 30vw; }
+    margin-left: 30vw;
+    animation: arrow 3s infinite; }
   #falling #marmelaide {
     position: absolute;
     background-image: url("../imgs/marmelaide.png");
@@ -335,6 +376,10 @@ canvas {
     padding-left: 5px;
     z-index: 100;
     font-size: 30px; }
+    #falling #hallway-next:hover {
+      background-color: #FF7D5B;
+      animation-duration: 3s;
+      animation-iteration-count: infinite; }
 
 /*----hallway----*/
 #hallway {
@@ -374,7 +419,7 @@ canvas {
 
 #glass-next {
   position: absolute;
-  background-color: #7e0f7d;
+  background-color: #2E3192;
   color: white;
   border-radius: 50px;
   font-family: "Josefin Sans", sans-serif;
@@ -386,6 +431,10 @@ canvas {
   padding-left: 5px;
   z-index: 1;
   font-size: 30px; }
+  #glass-next:hover {
+    background-color: #51268E;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
 
 /*----glass table----*/
 #glass-table {
@@ -434,7 +483,7 @@ canvas {
 
 #wonderland-next {
   position: absolute;
-  background-color: #7e0f7d;
+  background-color: #7ACCC8;
   color: white;
   border-radius: 50px;
   font-family: "Josefin Sans", sans-serif;
@@ -446,6 +495,10 @@ canvas {
   padding-left: 5px;
   z-index: 20;
   font-size: 30px; }
+  #wonderland-next:hover {
+    background-color: #FE989B;
+    animation-duration: 3s;
+    animation-iteration-count: infinite; }
 
 /*----glimpse of wonderland----*/
 #glimpse {

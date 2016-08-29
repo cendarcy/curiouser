@@ -51,7 +51,7 @@ $(document).ready(function(){
 // ======white rabbit movement====
 var whiteRabbit = $('.white-rabbit');
 
-TweenLite.to(whiteRabbit, 1, {opacity: 0, y: 200, delay: 50, ease:Power1.easeNone})
+TweenLite.to(whiteRabbit, 1, {opacity: 0, y: 200, delay: 30, ease:Power1.easeNone})
 
 
 // ====== rabbit hole ======

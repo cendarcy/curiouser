@@ -5,7 +5,12 @@
 
 @keyframes paragraph1{
   from {transform: translateY(50vw);}
-  to {transform: translateY(2vw);}
+  to {transform: translateY(1vw);}
+}
+
+@keyframes paragraph2{
+  from {transform: translateY(-37vh);}
+  to {transform: translateY(21vh);}
 }
 
 @keyframes arrow{
@@ -19,7 +24,21 @@
   to {transform: translateX(250vw);}  
 }  
 
+@keyframes paragraph3 {
+  from {transform: translateX(-50vw);}
+  to {transform: translateX(20px);}
+}
 
+@keyframes rabbit-hole-dots{
+  0%{transform: rotate(0);}
+  100%{transform: rotate(1turn);}
+}
+
+@keyframes down-arrow{
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); color:#369B1B; }
+  100% { transform: scale(1); }
+}
 
 /*----beginning main css----*/
 *{
@@ -149,10 +168,7 @@ canvas {
     color: white;
     font-size: 40px;
     opacity: 1;
-    animation-name: arrow;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-delay: 10s;
+    animation: arrow 3s infinite 5s;
   }
 
   .layer2 {
@@ -171,8 +187,8 @@ canvas {
     background-repeat: no-repeat;
     animation-name: rabbit;
     animation-duration: 10s;
-    animation-delay: 10s;
-    animation-timing-function: ease-in;
+    animation-delay: 15s;
+    animation-timing-function: ease;
     animation-fill-mode: both;
   }
 
@@ -201,6 +217,12 @@ canvas {
     padding-left: 5px;
     z-index: 1;
     font-size: 30px;
+
+    &:hover {
+     background-color: #5AAD15;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
   }
 }
 
@@ -218,17 +240,23 @@ canvas {
   div#p1 {
     margin-top: 2vh;
     animation-name: paragraph1;
-    animation-duration: 10s;
+    animation-duration: 4s;
     animation-timing-function: ease-in;
     animation-iteration-time: 1;
-    animation-fill-mode: forward;
+    animation-fill-mode: forwards;
   }
   
   div#p2{
     margin-left: 77vw;
-    margin-top: -14vh;
+    margin-top: -37vh;
     width: 50vw;
     float: left;
+    animation-name: paragraph2;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
   }
 }  
 
@@ -261,6 +289,7 @@ canvas {
     margin-left: 45vw;
     z-index: 10;
     background-repeat: no-repeat;
+    animation:rabbit-hole-dots 10s ease infinite;
   }
 
   .falling-next{
@@ -277,6 +306,13 @@ canvas {
     padding-left: 5px;
     z-index: 100;
     font-size: 30px;
+    
+     &:hover {
+     background-color: #CF3E79;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
+
   }
   
   #rabbit-hole-text{
@@ -291,7 +327,12 @@ canvas {
   width: 50vw;
   height: 20vh;
   font-size: 24px;
-  
+  animation-name: paragraph3;
+  animation-duration: 5s;
+  animation-timing-function: ease-in;
+  animation-iteration-time: 1;
+  animation-fill-mode: forwards;
+ 
   }
 }
 
@@ -309,6 +350,7 @@ canvas {
     font-size: 60px;
     margin-top: 8vh;
     margin-left: 30vw;
+    animation: arrow 3s infinite;
   }
   
   #marmelaide{
@@ -395,6 +437,12 @@ canvas {
     padding-left: 5px;
     z-index: 100;
     font-size: 30px;
+
+     &:hover {
+     background-color: #FF7D5B;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
  }
 }  
 
@@ -448,7 +496,7 @@ canvas {
 
 #glass-next {
   position: absolute;
-  background-color: #7e0f7d; 
+  background-color: #2E3192; 
   color: white;
   border-radius: 50px;
   font-family: $josefin;
@@ -460,6 +508,12 @@ canvas {
   padding-left: 5px;
   z-index: 1;
   font-size: 30px;
+
+    &:hover {
+     background-color: #51268E;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
 }
 
 
@@ -523,7 +577,7 @@ canvas {
 
 #wonderland-next {
   position: absolute;
-  background-color: #7e0f7d; 
+  background-color: #7ACCC8; 
   color: white;
   border-radius: 50px;
   font-family: $josefin;
@@ -535,6 +589,12 @@ canvas {
   padding-left: 5px;
   z-index: 20;
   font-size: 30px;
+
+    &:hover {
+     background-color: #FE989B;
+     animation-duration: 3s;
+     animation-iteration-count: infinite;
+    }
 }
 
 /*----glimpse of wonderland----*/
