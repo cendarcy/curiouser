@@ -46,12 +46,26 @@
   100%{transform: rotate(1turn);}
 }
 
+@keyframes hallway-text{
+  from {transform: translateY(100vw);}
+  to {transform: translateY(1.5vw);}
+}
+
 @keyframes glass-table-dots {
   0% { transform: scale(1); }
   50% { transform: scale(1.1); color:#4b7d3c; }
   100% { transform: scale(1); }
 }
 
+@keyframes glass-table-text{
+  from {transform: translateY(100vw);}
+  to {transform: translateY(1vw);}
+}
+
+@keyframes glimpse-text{
+  from {transform: translateX(-50vw);}
+  to {transform: translateX(20px);} 
+}
 
 
 /*----beginning main css----*/
@@ -266,7 +280,7 @@ canvas {
     width: 50vw;
     float: left;
     animation-name: paragraph2;
-    animation-duration: 5s;
+    animation-duration: 4s;
     animation-timing-function: ease-in;
     animation-iteration-time: 1;
     animation-fill-mode: forwards;
@@ -369,7 +383,7 @@ canvas {
   
   #marmelaide{
     position: absolute;
-    background-image:url("../imgs/marmelaide.png");
+    background-image:url("../imgs/marmelade.png");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -484,6 +498,11 @@ canvas {
     width: 50vw;
     height: 20vh;
     font-size: 20px;
+    animation-name: hallway-text;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
   }
 
 
@@ -555,6 +574,11 @@ canvas {
     /* height: 8vh; */
     font-size: 18px;
     /*background-color: #656565;*/
+    animation-name: glass-table-text;
+    animation-duration: 4s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
   }
 
 
@@ -632,10 +656,15 @@ canvas {
     color: white;
     z-index: 10;
     margin-left: 30px;
-    margin-top: 76vh;
+    margin-top: 72vh;
     width: 80vw;
     height: 20vh;
     font-size: 20px;
+    animation-name: glimpse-text;
+    animation-duration: 5s;
+    animation-timing-function: ease-in;
+    animation-iteration-time: 1;
+    animation-fill-mode: forwards;
   }
 
 
