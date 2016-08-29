@@ -47,15 +47,31 @@ nav {
     transform: translateX(20px); } }
 @keyframes rabbit-hole-dots {
   0% {
-    transform: rotate(0); }
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1);
+    color: #369B1B; }
   100% {
-    transform: rotate(1turn); } }
+    transform: scale(1); } }
 @keyframes down-arrow {
   0% {
     transform: scale(1); }
   50% {
     transform: scale(1.1);
     color: #369B1B; }
+  100% {
+    transform: scale(1); } }
+@keyframes hallway-dots {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(1turn); } }
+@keyframes glass-table-dots {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.1);
+    color: #4b7d3c; }
   100% {
     transform: scale(1); } }
 /*----beginning main css----*/
@@ -115,7 +131,7 @@ canvas {
   margin-top: -97vh;
   color: black;
   width: 98vw;
-  height: 99vh; }
+  height: 110vh; }
 
 /*----begin chapter 1 announcement----*/
 .announcement {
@@ -258,7 +274,7 @@ canvas {
     margin-left: 45vw;
     z-index: 10;
     background-repeat: no-repeat;
-    animation: rabbit-hole-dots 10s ease infinite; }
+    animation: rabbit-hole-dots 3s infinite; }
   #rabbit-hole .falling-next {
     position: absolute;
     background-color: #34ad65;
@@ -314,9 +330,7 @@ canvas {
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    /*width: 50%;
-    height: 50%;*/ }
+    background-size: cover; }
   #falling #falling-text {
     background-color: black;
     float: right;
@@ -415,7 +429,8 @@ canvas {
     height: 100vh;
     z-index: 1;
     background: url("../imgs/scene4/alice-s4-dots.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    animation: hallway-dots 10s ease infinite; }
 
 #glass-next {
   position: absolute;
@@ -450,14 +465,14 @@ canvas {
     display: block;
     position: absolute;
     font-family: "Lato", sans-serif;
-    color: white;
+    color: black;
     z-index: 100;
     margin-left: 42vw;
     margin-top: 81px;
     width: 31vw;
     /* height: 8vh; */
     font-size: 18px;
-    background-color: #656565; }
+    /*background-color: #656565;*/ }
   #glass-table #s5-background {
     width: 100vw;
     height: 100vh;
@@ -475,11 +490,13 @@ canvas {
   #glass-table #s5-dots {
     position: absolute;
     z-index: 10;
-    margin-top: -100vh;
-    width: 100vw;
-    height: 100vh;
+    margin-top: -101vh;
+    margin-left: 10vw;
+    width: 150%;
+    height: 150%;
     background: url("../imgs/scene5/alice-s5-dots.png");
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    animation: glass-table-dots 3s infinite; }
 
 #wonderland-next {
   position: absolute;

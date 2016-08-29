@@ -41,7 +41,7 @@ var pJS = function(tag_id, params){
         image: {
           src: 'imgs/pocketwatch.png',
           width: 100,
-          height: 100
+          height: 150
         }
       },
       opacity: {
