@@ -185,7 +185,7 @@ canvas {
     background-repeat: no-repeat; }
   #parallaxContainer i.fa-arrow-right {
     margin-top: 70vh;
-    margin-left: 52vw;
+    margin-left: 54vw;
     position: absolute;
     color: white;
     font-size: 40px;
@@ -200,7 +200,7 @@ canvas {
     background-repeat: no-repeat; }
   #parallaxContainer .white-rabbit {
     position: absolute;
-    margin-left: -100vw;
+    margin-left: -98vw;
     margin-top: 47vh;
     background-repeat: no-repeat;
     animation-name: rabbit;
